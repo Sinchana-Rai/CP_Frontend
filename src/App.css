@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+body {
+  background: #f3eeee;
+}
+.container {
+  min-width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+nav {
+  display: flex;
+  max-width: 1500px;
+  min-width: 1500px;
+  padding: 25px 10px 40px 10px;
+  margin-bottom: 25px;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin: 0 auto;
+}
+
+nav .logo {
+  flex: 1;
+  font-size: 2rem;
+}
+
+nav .navLinks .links {
+  display: flex;
+  gap: 25px;
+}
+nav .navLinks .links a {
+  text-decoration: underline;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  font-size: 24px;
+}
+
+nav .hamburger {
+  display: none;
+  z-index: 20;
+  position: unset;
+  background: #ffffff63;
+  padding: 10px 30px;
+}
+
+@media (max-width: 1520px) {
+  nav {
+    min-width: 100%;
+    padding: 25px 20px 40px 20px;
+  }
+}
+@media (max-width: 1100px) {
+  nav {
+    z-index: 20;
+    position: unset;
+    background: #ffffff63;
+    padding: 10px 30px;
+  }
+  nav::after {
+    content: "";
+    display: none;
+  }
+  nav .hamburger {
+    display: flex;
+  }
+  nav .navLinks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: -100%;
+    background: #eeece8;
+    width: 100%;
+    left: 0;
+    padding: 15px 7.5px;
+    z-index: -1;
+    transition: 0.3s;
+  }
+  nav .showmenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 67px;
+    background: #fff; 
+    transition: 0.3s;
+    margin-right: 30px;
+    z-index: 2;
+  }
+  nav .showmenu .links {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav .navLinks .links a {
+    color: #141414;
+  }
+}
+
+.mainInfo {
+  position: relative;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainInfo img {
+  position: absolute;
+  height: 100%;
+  padding: 25px;
+  
+}
+.mainInfo .item {
+  display: flex;
+  background: #fff;
+  position: relative;
+  padding: 50px 20px;
+  
+}
+.mainInfo .item h3 {
+  font-family: cursive;
+  color: #6e6d6a;
+  font-weight: 300;
+  font-size: 28px;
+}
+.mainInfo .item div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mainInfo .item div a {
+  padding: 10px 30px;
+  color: #fff;
+  background: #000;
+  width: fit-content;
+  cursor:pointer;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact .banner {
+  display: flex;
+  gap: 30px;
+}
+.contact .banner .item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+.contact .banner .item h4 {
+  font-size: 1.5rem;
+}
+.contact .banner .item p {
+  color: rgb(92, 85, 85);
+}
+
+.contact .banner:last-child .item form {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact .banner:last-child .item form div {
+  display: flex;
+  gap: 20px;
+}
+
+.contact .banner:last-child .item form input,
+.contact .banner:last-child .item form textarea {
+  padding: 8px;
+  background: transparent;
+  border: 1px solid black;
+}
+.contact .banner:last-child .item form button {
+  padding: 10px 40px;
+  font-size: 15px;
+  color: #fff;
+  background: black;
+  font-weight: 300;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+}
+
+footer {
+  padding: 50px 20px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  
+}
+
+/* About page */
+.about {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.about h2 {
+  color: #000;
+  font-weight: 200;
+  font-size: 32px;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+.about p {
+  line-height: 35px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+/* Services page */
+.services {
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+.services h2 {
+  color: #000;
+  font-weight: 200;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.services .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+.services .banner .item {
+  display: flex;
+  position: relative;
+  height: 350px;
+}
+.services .banner .item img {
+  width: 75%;
+  height: 75%;
+}
+.services .banner .item h3 {
+  position: absolute;
+  background: #fff7ea;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 300;
+  color: #6e6d6a;
+  bottom: -200%;
+}
+.services .banner .item:hover h3 { 
+  bottom: 0;
+}
+
+
+/* login */
+
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.login .banner .item {
+  /* flex: 1; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+}
+.login .banner .item h4 {
+  font-size: 1.5rem;
+}
+.login .banner .item p {
+  color: rgb(92, 85, 85);
+}
+
+.login .banner:last-child .item form {
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login .banner:last-child .item form input
+ {
+  padding: 8px;
+  background: transparent;
+  border: 1px solid black;
+}
+.login .banner:last-child .item form button {
+  padding: 10px 40px;
+  font-size: 15px;
+  color: #fff;
+  background: black;
+  font-weight: 300;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+}
+
+/* Dashboard */
+.dashboard .container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.dashboard .banner .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.dashboard .banner .item h2 {
+  font-size: 1.5rem;
+  color: black;
+  
+}
+.dashboard th {
+  color: rgb(92, 85, 85);
+  padding: 10px 15px;
+  justify-content: space-around;
+}
+
+
+.dashboard td {
+  color: rgb(92, 85, 85);
+  padding: 10px 15px;
+}
+
+.dashboard button {
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 300;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+
+}
+
+

@@ -34,7 +34,7 @@ const Services = () => {
     <>
       <div className="services container">
         <h2>OUR SERVICES</h2>
-        <div className="banner">
+        <div className="displayInfo">
           {options.map((el) => {
             return (
               <div className="item" key={el.id}>

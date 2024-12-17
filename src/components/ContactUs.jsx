@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
 
+const baseURL = 'https://cp-backend-uqux.onrender.com'
+
 const ContactUs = () => {
 
   const [name, setName] = useState("");
@@ -11,12 +13,20 @@ const ContactUs = () => {
 
   const handleSendMessage = async (e) => {
     e.preventDefault();
-    await axios
+    // await axios
+    //   .post(
+    //     "http://localhost:5000/contactus/sendmessage",
+    //     { name, email, subject, message, },
+    //     { withCredentials: true, headers: { "Content-Type": "application/json" },
+    //     })
+
+       await axios
       .post(
-        "http://localhost:5000/contactus/sendmessage",
+        `${baseURL}/contactus/sendmessage`,
         { name, email, subject, message, },
         { withCredentials: true, headers: { "Content-Type": "application/json" },
         })
+
       .then((res) => {
         toast.success(res.data.message);
         setName("");
@@ -32,7 +42,7 @@ const ContactUs = () => {
   return (
     <>
       <div className="contact container">
-        <div className="banner">
+        <div className="displayInfo">
           <div className="item">
             <h4>Address:</h4>
             <p>Street Name, City 45044</p>
@@ -46,7 +56,7 @@ const ContactUs = () => {
             <p>ss@gmail.com</p>
           </div>
         </div>
-        <div className="banner">
+        <div className="displayInfo">
           <div className="item">
             <form onSubmit={handleSendMessage}>
               <h4>Send a Message</h4>

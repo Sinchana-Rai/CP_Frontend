@@ -11,12 +11,11 @@ const Navbar = () => {
       <div className={show ? "navLinks showmenu" : "navLinks"}>
         <div className="links">
           <Link to="home" > HOME </Link>
-          {/* <Link to="services"> SERVICES </Link> */}
           <Link to="about" > ABOUT </Link>
           <Link to="contactus" > CONTACT US </Link>
           <Link to="login">LOGIN</Link>
           {/* <Link to="reviews">REVIEWS</Link> Page under construction */}
-          <Link to="dashboard">DASHBOARD</Link> 
+          {/* <Link to="dashboard">DASHBOARD</Link>  */}
 
         </div>
       </div>

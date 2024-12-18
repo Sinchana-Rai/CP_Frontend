@@ -15,8 +15,6 @@ const Navbar = () => {
           <Link to="contactus" > CONTACT US </Link>
           <Link to="login">LOGIN</Link>
           {/* <Link to="reviews">REVIEWS</Link> Page under construction */}
-          {/* <Link to="dashboard">DASHBOARD</Link>  */}
-
         </div>
       </div>
       <div className="hamburger" onClick={() => setShow(!show)}>

@@ -25,8 +25,11 @@ The application allows users to view event decors for different occasions and co
 - User can signup to the application. The Signup details will be saved to the backend which can be retrieved for viewing by the admin.
 - Admin can login to view the dashboard by clicking on the option ‘Admin Login’ and providing an Admin Key. On successful login, Admin will be navigated to Dashboard page where the Admin can View the users created during sign up and also the Messages sent by a customer will be listed for viewing.
 [Admin key :1234 (provided for testing purpose)]
+
 - Admin can perform delete operations for the users listed to delete any user.
 - Admin can perform delete operations for the messages listed to delete any message.
+- Admin can perform edit operations for the messages listed to update any message.
+
 ---
 
 ### Technologies Used:

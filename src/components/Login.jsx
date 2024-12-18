@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { toast, Toaster } from "react-hot-toast";
 
 const baseURL = 'https://cp-backend-uqux.onrender.com'
+// const baseURL = 'http://localhost:5000'
 
 const Login = () => {
   const [isLogin, setIsLogin] = useState(true);

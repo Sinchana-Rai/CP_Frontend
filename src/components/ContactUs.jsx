@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
 
 const baseURL = 'https://cp-backend-uqux.onrender.com'
+// const baseURL = 'http://localhost:5000'
 
 const ContactUs = () => {
 
@@ -14,15 +15,7 @@ const ContactUs = () => {
   const handleSendMessage = async (e) => {
     e.preventDefault();
 
-    //contains url which works locally
-    // await axios
-    //   .post(
-    //     "http://localhost:5000/contactus/sendmessage",
-    //     { name, email, subject, message, },
-    //     { withCredentials: true, headers: { "Content-Type": "application/json" },
-    //     })
-
-       await axios
+        await axios
       .post(
         `${baseURL}/contactus/sendmessage`,
         { name, email, subject, message, },

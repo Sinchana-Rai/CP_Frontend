@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
 
 const baseURL = 'https://cp-backend-uqux.onrender.com'
+
 const Dashboard = () => {
   const [users, setUsers] = useState([]);
   const [messages, setMessages] = useState([]);
@@ -47,7 +48,7 @@ const Dashboard = () => {
   const deleteMessage = async (id) => {
     try {
     //   await axios.delete(`http://localhost:5000/contactus/${id}`);
-    
+
     await axios.delete(`${baseURL}/contactus/${id}`);
       toast.success("Message deleted");
       setMessages(messages.filter((message) => message._id !== id));

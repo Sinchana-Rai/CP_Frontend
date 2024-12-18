@@ -13,6 +13,8 @@ const ContactUs = () => {
 
   const handleSendMessage = async (e) => {
     e.preventDefault();
+
+    //contains url which works locally
     // await axios
     //   .post(
     //     "http://localhost:5000/contactus/sendmessage",

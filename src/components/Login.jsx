@@ -1,3 +1,6 @@
+//Login Functionality is yet to be implemented
+//Admin login functionality works for a hardcoded key
+
 import React, { useState } from "react";
 import axios from "axios";
 
